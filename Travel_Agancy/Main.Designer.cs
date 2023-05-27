@@ -74,6 +74,9 @@
             this.SearchDriver = new System.Windows.Forms.Button();
             this.SubmitDriver = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Bus = new System.Windows.Forms.TabPage();
+            this.Providing = new System.Windows.Forms.TabPage();
+            this.Travel = new System.Windows.Forms.TabPage();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
@@ -87,8 +90,11 @@
             // 
             this.MainTabular.Controls.Add(this.UsersTab);
             this.MainTabular.Controls.Add(this.TaavoniTab);
-            this.MainTabular.Controls.Add(this.tabPage1);
+            this.MainTabular.Controls.Add(this.Travel);
             this.MainTabular.Controls.Add(this.Drivers);
+            this.MainTabular.Controls.Add(this.Bus);
+            this.MainTabular.Controls.Add(this.Providing);
+            this.MainTabular.Controls.Add(this.tabPage1);
             this.MainTabular.Location = new System.Drawing.Point(11, 11);
             this.MainTabular.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabular.Name = "MainTabular";
@@ -532,6 +538,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(692, 142);
             this.dataGridView1.TabIndex = 16;
             // 
+            // Bus
+            // 
+            this.Bus.Location = new System.Drawing.Point(4, 22);
+            this.Bus.Name = "Bus";
+            this.Bus.Size = new System.Drawing.Size(825, 421);
+            this.Bus.TabIndex = 4;
+            this.Bus.Text = "اتوبوس";
+            this.Bus.UseVisualStyleBackColor = true;
+            // 
+            // Providing
+            // 
+            this.Providing.Location = new System.Drawing.Point(4, 22);
+            this.Providing.Name = "Providing";
+            this.Providing.Size = new System.Drawing.Size(825, 421);
+            this.Providing.TabIndex = 5;
+            this.Providing.Text = "فراهم کردن";
+            this.Providing.UseVisualStyleBackColor = true;
+            // 
+            // Travel
+            // 
+            this.Travel.Location = new System.Drawing.Point(4, 22);
+            this.Travel.Name = "Travel";
+            this.Travel.Size = new System.Drawing.Size(825, 421);
+            this.Travel.TabIndex = 6;
+            this.Travel.Text = "سفر ها";
+            this.Travel.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,6 +635,9 @@
         private System.Windows.Forms.Button SubmitDriver;
         private System.Windows.Forms.Button SearchDriver;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage Travel;
+        private System.Windows.Forms.TabPage Bus;
+        private System.Windows.Forms.TabPage Providing;
     }
 }
 
