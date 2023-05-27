@@ -46,6 +46,7 @@
             this.phone = new System.Windows.Forms.TextBox();
             this.Fname = new System.Windows.Forms.TextBox();
             this.TaavoniTab = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
@@ -55,12 +56,13 @@
             // 
             this.MainTabular.Controls.Add(this.UsersTab);
             this.MainTabular.Controls.Add(this.TaavoniTab);
+            this.MainTabular.Controls.Add(this.tabPage1);
             this.MainTabular.Location = new System.Drawing.Point(12, 12);
             this.MainTabular.Name = "MainTabular";
             this.MainTabular.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MainTabular.RightToLeftLayout = true;
             this.MainTabular.SelectedIndex = 0;
-            this.MainTabular.Size = new System.Drawing.Size(1098, 503);
+            this.MainTabular.Size = new System.Drawing.Size(1098, 550);
             this.MainTabular.TabIndex = 0;
             // 
             // UsersTab
@@ -83,7 +85,7 @@
             this.UsersTab.Location = new System.Drawing.Point(4, 25);
             this.UsersTab.Name = "UsersTab";
             this.UsersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.UsersTab.Size = new System.Drawing.Size(1090, 474);
+            this.UsersTab.Size = new System.Drawing.Size(1090, 521);
             this.UsersTab.TabIndex = 0;
             this.UsersTab.Text = "کاربران";
             this.UsersTab.UseVisualStyleBackColor = true;
@@ -107,6 +109,7 @@
             this.SearchUser.TabIndex = 18;
             this.SearchUser.Text = "جستجو";
             this.SearchUser.UseVisualStyleBackColor = true;
+            this.SearchUser.Click += new System.EventHandler(this.SearchUser_Click);
             // 
             // SubmitUser
             // 
@@ -224,10 +227,19 @@
             this.TaavoniTab.Location = new System.Drawing.Point(4, 25);
             this.TaavoniTab.Name = "TaavoniTab";
             this.TaavoniTab.Padding = new System.Windows.Forms.Padding(3);
-            this.TaavoniTab.Size = new System.Drawing.Size(1090, 474);
+            this.TaavoniTab.Size = new System.Drawing.Size(1090, 521);
             this.TaavoniTab.TabIndex = 1;
             this.TaavoniTab.Text = "تعاونی ها";
             this.TaavoniTab.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1090, 521);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "رزرو ها";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -265,6 +277,7 @@
         private System.Windows.Forms.Button SearchUser;
         private System.Windows.Forms.Button SubmitUser;
         private System.Windows.Forms.DataGridView UserGridView;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
 
