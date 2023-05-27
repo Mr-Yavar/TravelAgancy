@@ -75,19 +75,19 @@ namespace Travel_Agancy
         private void RefreshGrid()
         {
             travelAgencyEntities db = new travelAgencyEntities();
-            UserGridView.DataSource = (from U in db.Users
-                                       select new
-                                       {
+            //UserGridView.DataSource = (from U in db.Users
+            //                           select new
+            //                           {
                                           
-                                           ID = U.id,
-                                           FullName = U.first_name + " " + U.last_name,
-                                           identifyCode = U.identification_code,
-                                           BrithDate = U.birth_date,
-                                           PhoneNumber = U.phone_number,
-                                           gender = U.gender ? "مرد" : "زن"
+            //                               ID = U.id,
+            //                               FullName = U.first_name + " " + U.last_name,
+            //                               identifyCode = U.identification_code,
+            //                               BrithDate = U.birth_date,
+            //                               PhoneNumber = U.phone_number,
+            //                               gender = U.gender ? "مرد" : "زن"
 
 
-                                       }).ToList();
+            //                           }).ToList();
         }
 
         private void SearchUser_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace Travel_Agancy
 
             }).ToList();
 
-            UserGridView.DataSource = list;
+            //UserGridView.DataSource = list;
         }
 
         private void SubmitCompany_Click(object sender, EventArgs e)
