@@ -186,7 +186,17 @@ namespace Travel_Agancy
                                        }).ToList();
         }
 
-        
+        private void SubmitDriver_Click(object sender, EventArgs e)
+        {
 
+
+            string D_Fname = DriverFname.Text.Trim();
+            string D_Lname = DriverLname.Text.Trim();
+            DateTime D_Brith = DriverBirthdate.Value;
+            string D_identifyCode = DriverindentifyCode.Text.Trim();
+            string D_phone = DriverPhone.Text.Trim();
+            string D_licNo = DriverLiNo.Text.Trim();
+           
+        }
     }
 }

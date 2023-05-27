@@ -47,23 +47,38 @@
             this.phone = new System.Windows.Forms.TextBox();
             this.Fname = new System.Windows.Forms.TextBox();
             this.TaavoniTab = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.CoName = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.CoPhone = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.SubmitCompany = new System.Windows.Forms.Button();
-            this.CompanyGridView = new System.Windows.Forms.DataGridView();
-            this.SearchCompany = new System.Windows.Forms.Button();
-            this.Drivers = new System.Windows.Forms.TabPage();
-            this.CoId = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.CoId = new System.Windows.Forms.TextBox();
+            this.SearchCompany = new System.Windows.Forms.Button();
+            this.CompanyGridView = new System.Windows.Forms.DataGridView();
+            this.SubmitCompany = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CoPhone = new System.Windows.Forms.TextBox();
+            this.CoName = new System.Windows.Forms.TextBox();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Drivers = new System.Windows.Forms.TabPage();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.DriverBirthdate = new System.Windows.Forms.DateTimePicker();
+            this.DriverFname = new System.Windows.Forms.TextBox();
+            this.DriverLiNo = new System.Windows.Forms.TextBox();
+            this.DriverPhone = new System.Windows.Forms.TextBox();
+            this.DriverindentifyCode = new System.Windows.Forms.TextBox();
+            this.DriverLname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.SearchDriver = new System.Windows.Forms.Button();
+            this.SubmitDriver = new System.Windows.Forms.Button();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
             this.TaavoniTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).BeginInit();
+            this.Drivers.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabular
@@ -73,7 +88,7 @@
             this.MainTabular.Controls.Add(this.tabPage1);
             this.MainTabular.Controls.Add(this.Drivers);
             this.MainTabular.Location = new System.Drawing.Point(11, 11);
-            this.MainTabular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MainTabular.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabular.Name = "MainTabular";
             this.MainTabular.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MainTabular.RightToLeftLayout = true;
@@ -99,9 +114,9 @@
             this.UsersTab.Controls.Add(this.phone);
             this.UsersTab.Controls.Add(this.Fname);
             this.UsersTab.Location = new System.Drawing.Point(4, 22);
-            this.UsersTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsersTab.Margin = new System.Windows.Forms.Padding(2);
             this.UsersTab.Name = "UsersTab";
-            this.UsersTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsersTab.Padding = new System.Windows.Forms.Padding(2);
             this.UsersTab.Size = new System.Drawing.Size(825, 421);
             this.UsersTab.TabIndex = 0;
             this.UsersTab.Text = "کاربران";
@@ -111,7 +126,7 @@
             // 
             this.UserGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.UserGridView.Location = new System.Drawing.Point(20, 220);
-            this.UserGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UserGridView.Margin = new System.Windows.Forms.Padding(2);
             this.UserGridView.Name = "UserGridView";
             this.UserGridView.ReadOnly = true;
             this.UserGridView.RowHeadersWidth = 51;
@@ -122,7 +137,7 @@
             // SearchUser
             // 
             this.SearchUser.Location = new System.Drawing.Point(566, 165);
-            this.SearchUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchUser.Margin = new System.Windows.Forms.Padding(2);
             this.SearchUser.Name = "SearchUser";
             this.SearchUser.Size = new System.Drawing.Size(75, 19);
             this.SearchUser.TabIndex = 18;
@@ -133,7 +148,7 @@
             // SubmitUser
             // 
             this.SubmitUser.Location = new System.Drawing.Point(656, 165);
-            this.SubmitUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubmitUser.Margin = new System.Windows.Forms.Padding(2);
             this.SubmitUser.Name = "SubmitUser";
             this.SubmitUser.Size = new System.Drawing.Size(75, 19);
             this.SubmitUser.TabIndex = 17;
@@ -148,7 +163,7 @@
             "زن",
             "مرد"});
             this.gender.Location = new System.Drawing.Point(656, 131);
-            this.gender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gender.Margin = new System.Windows.Forms.Padding(2);
             this.gender.Name = "gender";
             this.gender.Size = new System.Drawing.Size(76, 21);
             this.gender.TabIndex = 16;
@@ -217,7 +232,7 @@
             // Brithdate
             // 
             this.Brithdate.Location = new System.Drawing.Point(581, 106);
-            this.Brithdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Brithdate.Margin = new System.Windows.Forms.Padding(2);
             this.Brithdate.Name = "Brithdate";
             this.Brithdate.Size = new System.Drawing.Size(151, 20);
             this.Brithdate.TabIndex = 8;
@@ -225,7 +240,7 @@
             // Lname
             // 
             this.Lname.Location = new System.Drawing.Point(656, 37);
-            this.Lname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Lname.Margin = new System.Windows.Forms.Padding(2);
             this.Lname.Name = "Lname";
             this.Lname.Size = new System.Drawing.Size(76, 20);
             this.Lname.TabIndex = 7;
@@ -233,7 +248,7 @@
             // identifyCode
             // 
             this.identifyCode.Location = new System.Drawing.Point(656, 60);
-            this.identifyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.identifyCode.Margin = new System.Windows.Forms.Padding(2);
             this.identifyCode.Name = "identifyCode";
             this.identifyCode.Size = new System.Drawing.Size(76, 20);
             this.identifyCode.TabIndex = 6;
@@ -241,7 +256,7 @@
             // phone
             // 
             this.phone.Location = new System.Drawing.Point(656, 83);
-            this.phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phone.Margin = new System.Windows.Forms.Padding(2);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(76, 20);
             this.phone.TabIndex = 5;
@@ -249,7 +264,7 @@
             // Fname
             // 
             this.Fname.Location = new System.Drawing.Point(656, 15);
-            this.Fname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fname.Margin = new System.Windows.Forms.Padding(2);
             this.Fname.Name = "Fname";
             this.Fname.Size = new System.Drawing.Size(76, 20);
             this.Fname.TabIndex = 0;
@@ -266,70 +281,38 @@
             this.TaavoniTab.Controls.Add(this.CoPhone);
             this.TaavoniTab.Controls.Add(this.CoName);
             this.TaavoniTab.Location = new System.Drawing.Point(4, 22);
-            this.TaavoniTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TaavoniTab.Margin = new System.Windows.Forms.Padding(2);
             this.TaavoniTab.Name = "TaavoniTab";
-            this.TaavoniTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TaavoniTab.Padding = new System.Windows.Forms.Padding(2);
             this.TaavoniTab.Size = new System.Drawing.Size(825, 421);
             this.TaavoniTab.TabIndex = 1;
             this.TaavoniTab.Text = "تعاونی ها";
             this.TaavoniTab.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // label9
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(825, 421);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "رزرو ها";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(742, 40);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(73, 13);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "شماره تعاونی";
             // 
-            // CoName
+            // CoId
             // 
-            this.CoName.Location = new System.Drawing.Point(641, 9);
-            this.CoName.Name = "CoName";
-            this.CoName.Size = new System.Drawing.Size(72, 20);
-            this.CoName.TabIndex = 0;
+            this.CoId.Location = new System.Drawing.Point(641, 37);
+            this.CoId.Name = "CoId";
+            this.CoId.Size = new System.Drawing.Size(72, 20);
+            this.CoId.TabIndex = 22;
             // 
-            // contextMenuStrip1
+            // SearchCompany
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // CoPhone
-            // 
-            this.CoPhone.Location = new System.Drawing.Point(641, 63);
-            this.CoPhone.Name = "CoPhone";
-            this.CoPhone.Size = new System.Drawing.Size(72, 20);
-            this.CoPhone.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(720, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "شماره تلفن تعاونی";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(758, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "نام تعاونی";
-            // 
-            // SubmitCompany
-            // 
-            this.SubmitCompany.Location = new System.Drawing.Point(641, 89);
-            this.SubmitCompany.Name = "SubmitCompany";
-            this.SubmitCompany.Size = new System.Drawing.Size(72, 26);
-            this.SubmitCompany.TabIndex = 4;
-            this.SubmitCompany.Text = "ثبت";
-            this.SubmitCompany.UseVisualStyleBackColor = true;
-            this.SubmitCompany.Click += new System.EventHandler(this.SubmitCompany_Click);
+            this.SearchCompany.Location = new System.Drawing.Point(554, 89);
+            this.SearchCompany.Name = "SearchCompany";
+            this.SearchCompany.Size = new System.Drawing.Size(81, 26);
+            this.SearchCompany.TabIndex = 21;
+            this.SearchCompany.Text = "جستجو";
+            this.SearchCompany.UseVisualStyleBackColor = true;
             // 
             // CompanyGridView
             // 
@@ -343,17 +326,74 @@
             this.CompanyGridView.Size = new System.Drawing.Size(781, 122);
             this.CompanyGridView.TabIndex = 20;
             // 
-            // SearchCompany
+            // SubmitCompany
             // 
-            this.SearchCompany.Location = new System.Drawing.Point(554, 89);
-            this.SearchCompany.Name = "SearchCompany";
-            this.SearchCompany.Size = new System.Drawing.Size(81, 26);
-            this.SearchCompany.TabIndex = 21;
-            this.SearchCompany.Text = "جستجو";
-            this.SearchCompany.UseVisualStyleBackColor = true;
+            this.SubmitCompany.Location = new System.Drawing.Point(641, 89);
+            this.SubmitCompany.Name = "SubmitCompany";
+            this.SubmitCompany.Size = new System.Drawing.Size(72, 26);
+            this.SubmitCompany.TabIndex = 4;
+            this.SubmitCompany.Text = "ثبت";
+            this.SubmitCompany.UseVisualStyleBackColor = true;
+            this.SubmitCompany.Click += new System.EventHandler(this.SubmitCompany_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(758, 12);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(57, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "نام تعاونی";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(720, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "شماره تلفن تعاونی";
+            // 
+            // CoPhone
+            // 
+            this.CoPhone.Location = new System.Drawing.Point(641, 63);
+            this.CoPhone.Name = "CoPhone";
+            this.CoPhone.Size = new System.Drawing.Size(72, 20);
+            this.CoPhone.TabIndex = 1;
+            // 
+            // CoName
+            // 
+            this.CoName.Location = new System.Drawing.Point(641, 9);
+            this.CoName.Name = "CoName";
+            this.CoName.Size = new System.Drawing.Size(72, 20);
+            this.CoName.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(825, 421);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "رزرو ها";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Drivers
             // 
+            this.Drivers.Controls.Add(this.SubmitDriver);
+            this.Drivers.Controls.Add(this.SearchDriver);
+            this.Drivers.Controls.Add(this.label15);
+            this.Drivers.Controls.Add(this.label14);
+            this.Drivers.Controls.Add(this.label13);
+            this.Drivers.Controls.Add(this.label12);
+            this.Drivers.Controls.Add(this.label11);
+            this.Drivers.Controls.Add(this.label10);
+            this.Drivers.Controls.Add(this.DriverLname);
+            this.Drivers.Controls.Add(this.DriverindentifyCode);
+            this.Drivers.Controls.Add(this.DriverPhone);
+            this.Drivers.Controls.Add(this.DriverLiNo);
+            this.Drivers.Controls.Add(this.DriverFname);
+            this.Drivers.Controls.Add(this.DriverBirthdate);
             this.Drivers.Location = new System.Drawing.Point(4, 22);
             this.Drivers.Name = "Drivers";
             this.Drivers.Size = new System.Drawing.Size(825, 421);
@@ -361,21 +401,125 @@
             this.Drivers.Text = "رانندگان";
             this.Drivers.UseVisualStyleBackColor = true;
             // 
-            // CoId
+            // contextMenuStrip1
             // 
-            this.CoId.Location = new System.Drawing.Point(641, 37);
-            this.CoId.Name = "CoId";
-            this.CoId.Size = new System.Drawing.Size(72, 20);
-            this.CoId.TabIndex = 22;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label9
+            // DriverBirthdate
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(742, 40);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(73, 13);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "شماره تعاونی";
+            this.DriverBirthdate.Location = new System.Drawing.Point(521, 93);
+            this.DriverBirthdate.Name = "DriverBirthdate";
+            this.DriverBirthdate.Size = new System.Drawing.Size(200, 20);
+            this.DriverBirthdate.TabIndex = 0;
+            // 
+            // DriverFname
+            // 
+            this.DriverFname.Location = new System.Drawing.Point(651, 13);
+            this.DriverFname.Name = "DriverFname";
+            this.DriverFname.Size = new System.Drawing.Size(70, 20);
+            this.DriverFname.TabIndex = 1;
+            // 
+            // DriverLiNo
+            // 
+            this.DriverLiNo.Location = new System.Drawing.Point(651, 145);
+            this.DriverLiNo.Name = "DriverLiNo";
+            this.DriverLiNo.Size = new System.Drawing.Size(70, 20);
+            this.DriverLiNo.TabIndex = 3;
+            // 
+            // DriverPhone
+            // 
+            this.DriverPhone.Location = new System.Drawing.Point(651, 119);
+            this.DriverPhone.Name = "DriverPhone";
+            this.DriverPhone.Size = new System.Drawing.Size(70, 20);
+            this.DriverPhone.TabIndex = 4;
+            // 
+            // DriverindentifyCode
+            // 
+            this.DriverindentifyCode.Location = new System.Drawing.Point(651, 65);
+            this.DriverindentifyCode.Name = "DriverindentifyCode";
+            this.DriverindentifyCode.Size = new System.Drawing.Size(70, 20);
+            this.DriverindentifyCode.TabIndex = 6;
+            // 
+            // DriverLname
+            // 
+            this.DriverLname.Location = new System.Drawing.Point(651, 39);
+            this.DriverLname.Name = "DriverLname";
+            this.DriverLname.Size = new System.Drawing.Size(70, 20);
+            this.DriverLname.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(795, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 13);
+            this.label10.TabIndex = 8;
+            this.label10.Text = "نام";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(746, 46);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "نام خانوادگی";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(775, 72);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "کد ملی";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(762, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "تاریخ تولد";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(748, 126);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 13);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "شماره موبایل";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(733, 152);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(84, 13);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "شماره گواهینامه";
+            // 
+            // SearchDriver
+            // 
+            this.SearchDriver.Location = new System.Drawing.Point(549, 183);
+            this.SearchDriver.Name = "SearchDriver";
+            this.SearchDriver.Size = new System.Drawing.Size(74, 24);
+            this.SearchDriver.TabIndex = 14;
+            this.SearchDriver.Text = "جستجو";
+            this.SearchDriver.UseVisualStyleBackColor = true;
+            // 
+            // SubmitDriver
+            // 
+            this.SubmitDriver.Location = new System.Drawing.Point(646, 183);
+            this.SubmitDriver.Name = "SubmitDriver";
+            this.SubmitDriver.Size = new System.Drawing.Size(75, 24);
+            this.SubmitDriver.TabIndex = 15;
+            this.SubmitDriver.Text = "ثبت";
+            this.SubmitDriver.UseVisualStyleBackColor = true;
+            this.SubmitDriver.Click += new System.EventHandler(this.SubmitDriver_Click);
             // 
             // Main
             // 
@@ -383,7 +527,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 466);
             this.Controls.Add(this.MainTabular);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "آزانیس مسافربری";
             this.MainTabular.ResumeLayout(false);
@@ -393,6 +537,8 @@
             this.TaavoniTab.ResumeLayout(false);
             this.TaavoniTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).EndInit();
+            this.Drivers.ResumeLayout(false);
+            this.Drivers.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -429,6 +575,20 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox CoId;
         private System.Windows.Forms.TabPage Drivers;
+        private System.Windows.Forms.TextBox DriverLname;
+        private System.Windows.Forms.TextBox DriverindentifyCode;
+        private System.Windows.Forms.TextBox DriverPhone;
+        private System.Windows.Forms.TextBox DriverLiNo;
+        private System.Windows.Forms.TextBox DriverFname;
+        private System.Windows.Forms.DateTimePicker DriverBirthdate;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button SubmitDriver;
+        private System.Windows.Forms.Button SearchDriver;
     }
 }
 
