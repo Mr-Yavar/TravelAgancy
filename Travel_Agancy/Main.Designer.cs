@@ -53,7 +53,7 @@
             this.CompanyGridView = new System.Windows.Forms.DataGridView();
             this.SubmitCompany = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1000 = new System.Windows.Forms.Label();
             this.CoPhone = new System.Windows.Forms.TextBox();
             this.CoName = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -77,6 +77,18 @@
             this.Bus = new System.Windows.Forms.TabPage();
             this.Providing = new System.Windows.Forms.TabPage();
             this.Travel = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.SubmitTravel = new System.Windows.Forms.Button();
+            this.SearchTravel = new System.Windows.Forms.Button();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
@@ -84,6 +96,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).BeginInit();
             this.Drivers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Travel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabular
@@ -93,8 +106,8 @@
             this.MainTabular.Controls.Add(this.Travel);
             this.MainTabular.Controls.Add(this.Drivers);
             this.MainTabular.Controls.Add(this.Bus);
-            this.MainTabular.Controls.Add(this.Providing);
             this.MainTabular.Controls.Add(this.tabPage1);
+            this.MainTabular.Controls.Add(this.Providing);
             this.MainTabular.Location = new System.Drawing.Point(11, 11);
             this.MainTabular.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabular.Name = "MainTabular";
@@ -285,7 +298,7 @@
             this.TaavoniTab.Controls.Add(this.CompanyGridView);
             this.TaavoniTab.Controls.Add(this.SubmitCompany);
             this.TaavoniTab.Controls.Add(this.label8);
-            this.TaavoniTab.Controls.Add(this.label2);
+            this.TaavoniTab.Controls.Add(this.label1000);
             this.TaavoniTab.Controls.Add(this.CoPhone);
             this.TaavoniTab.Controls.Add(this.CoName);
             this.TaavoniTab.Location = new System.Drawing.Point(4, 22);
@@ -353,14 +366,14 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "نام تعاونی";
             // 
-            // label2
+            // label1000
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(720, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "شماره تلفن تعاونی";
+            this.label1000.AutoSize = true;
+            this.label1000.Location = new System.Drawing.Point(720, 66);
+            this.label1000.Name = "label1000";
+            this.label1000.Size = new System.Drawing.Size(95, 13);
+            this.label1000.TabIndex = 2;
+            this.label1000.Text = "شماره تلفن تعاونی";
             // 
             // CoPhone
             // 
@@ -558,12 +571,122 @@
             // 
             // Travel
             // 
+            this.Travel.Controls.Add(this.SearchTravel);
+            this.Travel.Controls.Add(this.SubmitTravel);
+            this.Travel.Controls.Add(this.dateTimePicker1);
+            this.Travel.Controls.Add(this.label21);
+            this.Travel.Controls.Add(this.label19);
+            this.Travel.Controls.Add(this.label18);
+            this.Travel.Controls.Add(this.label17);
+            this.Travel.Controls.Add(this.label16);
+            this.Travel.Controls.Add(this.textBox6);
+            this.Travel.Controls.Add(this.textBox5);
+            this.Travel.Controls.Add(this.textBox4);
+            this.Travel.Controls.Add(this.textBox1);
             this.Travel.Location = new System.Drawing.Point(4, 22);
             this.Travel.Name = "Travel";
             this.Travel.Size = new System.Drawing.Size(825, 421);
             this.Travel.TabIndex = 6;
             this.Travel.Text = "سفر ها";
             this.Travel.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(682, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(65, 20);
+            this.textBox1.TabIndex = 0;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(682, 94);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(65, 20);
+            this.textBox4.TabIndex = 3;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(682, 68);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(65, 20);
+            this.textBox5.TabIndex = 4;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(682, 42);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(65, 20);
+            this.textBox6.TabIndex = 5;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(791, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(24, 13);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "مبدا";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(784, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(31, 13);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "مقصد";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(764, 71);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(51, 13);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "قیمت بلیط";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(787, 97);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(28, 13);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "زمان";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(783, 123);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(32, 13);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "تاریخ";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(547, 123);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // SubmitTravel
+            // 
+            this.SubmitTravel.Location = new System.Drawing.Point(666, 156);
+            this.SubmitTravel.Name = "SubmitTravel";
+            this.SubmitTravel.Size = new System.Drawing.Size(81, 23);
+            this.SubmitTravel.TabIndex = 13;
+            this.SubmitTravel.Text = "ثبت";
+            this.SubmitTravel.UseVisualStyleBackColor = true;
+            // 
+            // SearchTravel
+            // 
+            this.SearchTravel.Location = new System.Drawing.Point(567, 156);
+            this.SearchTravel.Name = "SearchTravel";
+            this.SearchTravel.Size = new System.Drawing.Size(84, 23);
+            this.SearchTravel.TabIndex = 14;
+            this.SearchTravel.Text = "جستجو";
+            this.SearchTravel.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -584,6 +707,8 @@
             this.Drivers.ResumeLayout(false);
             this.Drivers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Travel.ResumeLayout(false);
+            this.Travel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -611,7 +736,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button SubmitCompany;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1000;
         private System.Windows.Forms.TextBox CoPhone;
         private System.Windows.Forms.TextBox CoName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
@@ -638,6 +763,18 @@
         private System.Windows.Forms.TabPage Travel;
         private System.Windows.Forms.TabPage Bus;
         private System.Windows.Forms.TabPage Providing;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button SearchTravel;
+        private System.Windows.Forms.Button SubmitTravel;
     }
 }
 
