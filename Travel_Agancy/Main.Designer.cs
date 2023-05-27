@@ -75,13 +75,14 @@
             this.Bus = new System.Windows.Forms.TabPage();
             this.Providing = new System.Windows.Forms.TabPage();
             this.Travel = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            //this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label2000 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -149,7 +150,7 @@
             // UsersTab
             // 
             this.UsersTab.Controls.Add(this.label1);
-            this.UsersTab.Controls.Add(this.textBox1);
+           // this.UsersTab.Controls.Add(this.textBox1);
             this.UsersTab.Controls.Add(this.cancelupdateuser);
             this.UsersTab.Controls.Add(this.updateuser);
             this.UsersTab.Controls.Add(this.Ugender);
@@ -406,13 +407,13 @@
             this.label1000.Size = new System.Drawing.Size(95, 13);
             this.label1000.TabIndex = 2;
             this.label1000.Text = "شماره تلفن تعاونی";
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(960, 81);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "شماره تلفن تعاونی";
+            this.label2000.AutoSize = true;
+            this.label2000.Location = new System.Drawing.Point(960, 81);
+            this.label2000.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2000.Name = "label2";
+            this.label2000.Size = new System.Drawing.Size(99, 16);
+            this.label2000.TabIndex = 2;
+            this.label2000.Text = "شماره تلفن تعاونی";
             // 
             // CoPhone
             // 
@@ -1069,6 +1070,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2000;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -1116,7 +1118,7 @@
         private System.Windows.Forms.TextBox UFName;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+       // private System.Windows.Forms.TextBox textBox1;
     }
 }
 
