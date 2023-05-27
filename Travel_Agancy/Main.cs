@@ -74,20 +74,31 @@ namespace Travel_Agancy
 
         private void RefreshGrid()
         {
+            UserView.Items.Clear();
             travelAgencyEntities db = new travelAgencyEntities();
-            //UserGridView.DataSource = (from U in db.Users
-            //                           select new
-            //                           {
-                                          
-            //                               ID = U.id,
-            //                               FullName = U.first_name + " " + U.last_name,
-            //                               identifyCode = U.identification_code,
-            //                               BrithDate = U.birth_date,
-            //                               PhoneNumber = U.phone_number,
-            //                               gender = U.gender ? "مرد" : "زن"
+            var list = (from U in db.Users
+                        select new
+                        {
+                            ID = U.id,
+                            FullName = U.first_name + " " + U.last_name,
+                            identifyCode = U.identification_code,
+                            BrithDate = U.birth_date,
+                            PhoneNumber = U.phone_number,
+                            gender = U.gender ? "مرد" : "زن"
+                        }).ToList();
 
+            var formattedList = list.Select(u => $"{u.ID},{u.FullName},{u.identifyCode},{u.BrithDate.Value.Date.ToString().Split(' ')[0]},{u.PhoneNumber},{u.gender}").Select(x => x.Split(',')).ToList();
 
-            //                           }).ToList();
+            for (int i = 0; i < formattedList.Count(); i++)
+            {
+                ListViewItem item = new ListViewItem();
+                for(int j = 0; j < 6; j++)
+                {
+                    item.SubItems.Add(formattedList[i][j]);
+                }
+                UserView.Items.Add(item);
+            }
+
         }
 
         private void SearchUser_Click(object sender, EventArgs e)
@@ -138,7 +149,20 @@ namespace Travel_Agancy
 
             }).ToList();
 
-            //UserGridView.DataSource = list;
+            UserView.Items.Clear();
+        
+
+            var formattedList = list.Select(u => $"{u.ID},{u.FullName},{u.identifyCode},{u.BrithDate.Value.Date.ToString().Split(' ')[0]},{u.PhoneNumber},{u.gender}").Select(x => x.Split(',')).ToList();
+
+            for (int i = 0; i < formattedList.Count(); i++)
+            {
+                ListViewItem item = new ListViewItem();
+                for (int j = 0; j < 6; j++)
+                {
+                    item.SubItems.Add(formattedList[i][j]);
+                }
+                UserView.Items.Add(item);
+            }
         }
 
         private void SubmitCompany_Click(object sender, EventArgs e)
@@ -174,6 +198,7 @@ namespace Travel_Agancy
         }
         private void RefreshCoGrid()
         {
+           
             travelAgencyEntities db = new travelAgencyEntities();
             CompanyGridView.DataSource = (from Co in db.companies
                                        select new
@@ -197,6 +222,68 @@ namespace Travel_Agancy
             string D_phone = DriverPhone.Text.Trim();
             string D_licNo = DriverLiNo.Text.Trim();
            
+        }
+
+        private void UserView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (UserView.SelectedItems.Count == 1)
+            {
+                var subitems = UserView.SelectedItems[0].SubItems;
+                UUSerID.Text = subitems[1].Text;
+                
+                UFName.Text = subitems[2].Text.Split(' ')[0];
+                ULName.Text = subitems[2].Text.Split(' ')[1];
+                UidentifyCode.Text = subitems[3].Text;
+                UbrithDate.Text = subitems[4].Text;
+                Uphone.Text = subitems[5].Text;
+                Ugender.Text = subitems[6].Text;    
+            }
+        }
+
+        private void updateuser_Click(object sender, EventArgs e)
+        {
+            if (UUSerID.Text == "")
+                return;
+            string U_Fname = UFName.Text.Trim();
+            string U_Lname = ULName.Text.Trim();
+            DateTime U_Brith = UbrithDate.Value;
+            string U_identifyCode = UidentifyCode.Text.Trim();
+            string U_phone = Uphone.Text.Trim();
+            string U_gender = Ugender.Text.Trim();
+            bool Ugener = false; // زن
+            if (U_gender == "مرد")
+            {
+                Ugener = true;
+            }
+
+            travelAgencyEntities db = new travelAgencyEntities();
+
+
+            int id =Convert.ToInt32(UUSerID.Text);
+            var newuser = db.Users.FirstOrDefault(x => x.id == id);
+
+            newuser.phone_number = U_phone;
+                 newuser.first_name = U_Fname;
+                 newuser.last_name = U_Lname;
+                 newuser.gender = Ugener;
+                 newuser.birth_date = U_Brith;
+            newuser.identification_code = U_identifyCode;
+             db.SaveChanges();
+
+            RefreshGrid();
+
+        }
+
+        private void cancelupdateuser_Click(object sender, EventArgs e)
+        {
+            UUSerID.Text = "";
+
+            UFName.Text = "";
+            ULName.Text = "";
+            UidentifyCode.Text = "";
+            UbrithDate.Text = "";
+            Uphone.Text = "";
+            Ugender.Text = "";
         }
     }
 }

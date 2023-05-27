@@ -31,6 +31,30 @@
             this.components = new System.ComponentModel.Container();
             this.MainTabular = new System.Windows.Forms.TabControl();
             this.UsersTab = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UUSerID = new System.Windows.Forms.TextBox();
+            this.cancelupdateuser = new System.Windows.Forms.Button();
+            this.updateuser = new System.Windows.Forms.Button();
+            this.Ugender = new System.Windows.Forms.ComboBox();
+            this.label16swbasbsw = new System.Windows.Forms.Label();
+            this.label17vSEVBweb = new System.Windows.Forms.Label();
+            this.label18sabSWBEwe = new System.Windows.Forms.Label();
+            this.label19webWEBQEWB = new System.Windows.Forms.Label();
+            this.label20WEBwebqe = new System.Windows.Forms.Label();
+            this.label21xbzdfbzssrb = new System.Windows.Forms.Label();
+            this.UbrithDate = new System.Windows.Forms.DateTimePicker();
+            this.ULName = new System.Windows.Forms.TextBox();
+            this.UidentifyCode = new System.Windows.Forms.TextBox();
+            this.Uphone = new System.Windows.Forms.TextBox();
+            this.UFName = new System.Windows.Forms.TextBox();
+            this.UserView = new System.Windows.Forms.ListView();
+            this.emptycelluser = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UserIDHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FullNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Uidenifycode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UphoneNumberheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BrithdateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UgenederHeadaer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SearchUser = new System.Windows.Forms.Button();
             this.SubmitUser = new System.Windows.Forms.Button();
             this.gender = new System.Windows.Forms.ComboBox();
@@ -76,23 +100,6 @@
             this.Providing = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.cancelupdateuser = new System.Windows.Forms.Button();
-            this.updateuser = new System.Windows.Forms.Button();
-            this.Ugender = new System.Windows.Forms.ComboBox();
-            this.label16swbasbsw = new System.Windows.Forms.Label();
-            this.label17vSEVBweb = new System.Windows.Forms.Label();
-            this.label18sabSWBEwe = new System.Windows.Forms.Label();
-            this.label19webWEBQEWB = new System.Windows.Forms.Label();
-            this.label20WEBwebqe = new System.Windows.Forms.Label();
-            this.label21xbzdfbzssrb = new System.Windows.Forms.Label();
-            this.UbrithDate = new System.Windows.Forms.DateTimePicker();
-            this.ULName = new System.Windows.Forms.TextBox();
-            this.UidentifyCode = new System.Windows.Forms.TextBox();
-            this.Uphone = new System.Windows.Forms.TextBox();
-            this.UFName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             this.TaavoniTab.SuspendLayout();
@@ -122,7 +129,7 @@
             // UsersTab
             // 
             this.UsersTab.Controls.Add(this.label1);
-            this.UsersTab.Controls.Add(this.textBox1);
+            this.UsersTab.Controls.Add(this.UUSerID);
             this.UsersTab.Controls.Add(this.cancelupdateuser);
             this.UsersTab.Controls.Add(this.updateuser);
             this.UsersTab.Controls.Add(this.Ugender);
@@ -137,7 +144,7 @@
             this.UsersTab.Controls.Add(this.UidentifyCode);
             this.UsersTab.Controls.Add(this.Uphone);
             this.UsersTab.Controls.Add(this.UFName);
-            this.UsersTab.Controls.Add(this.listView1);
+            this.UsersTab.Controls.Add(this.UserView);
             this.UsersTab.Controls.Add(this.SearchUser);
             this.UsersTab.Controls.Add(this.SubmitUser);
             this.UsersTab.Controls.Add(this.gender);
@@ -160,6 +167,213 @@
             this.UsersTab.TabIndex = 0;
             this.UsersTab.Text = "کاربران";
             this.UsersTab.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(617, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.TabIndex = 35;
+            this.label1.Text = "شناسه";
+            // 
+            // UUSerID
+            // 
+            this.UUSerID.Location = new System.Drawing.Point(449, 25);
+            this.UUSerID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UUSerID.Name = "UUSerID";
+            this.UUSerID.ReadOnly = true;
+            this.UUSerID.Size = new System.Drawing.Size(100, 22);
+            this.UUSerID.TabIndex = 34;
+            // 
+            // cancelupdateuser
+            // 
+            this.cancelupdateuser.Location = new System.Drawing.Point(329, 236);
+            this.cancelupdateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancelupdateuser.Name = "cancelupdateuser";
+            this.cancelupdateuser.Size = new System.Drawing.Size(100, 23);
+            this.cancelupdateuser.TabIndex = 33;
+            this.cancelupdateuser.Text = "لغو";
+            this.cancelupdateuser.UseVisualStyleBackColor = true;
+            this.cancelupdateuser.Click += new System.EventHandler(this.cancelupdateuser_Click);
+            // 
+            // updateuser
+            // 
+            this.updateuser.Location = new System.Drawing.Point(449, 236);
+            this.updateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.updateuser.Name = "updateuser";
+            this.updateuser.Size = new System.Drawing.Size(100, 23);
+            this.updateuser.TabIndex = 32;
+            this.updateuser.Text = "بروزرسانی";
+            this.updateuser.UseVisualStyleBackColor = true;
+            this.updateuser.Click += new System.EventHandler(this.updateuser_Click);
+            // 
+            // Ugender
+            // 
+            this.Ugender.FormattingEnabled = true;
+            this.Ugender.Items.AddRange(new object[] {
+            "زن",
+            "مرد"});
+            this.Ugender.Location = new System.Drawing.Point(449, 194);
+            this.Ugender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Ugender.Name = "Ugender";
+            this.Ugender.Size = new System.Drawing.Size(100, 24);
+            this.Ugender.TabIndex = 31;
+            this.Ugender.Text = "انتخاب کنید";
+            // 
+            // label16swbasbsw
+            // 
+            this.label16swbasbsw.AutoSize = true;
+            this.label16swbasbsw.Location = new System.Drawing.Point(585, 82);
+            this.label16swbasbsw.Name = "label16swbasbsw";
+            this.label16swbasbsw.Size = new System.Drawing.Size(73, 16);
+            this.label16swbasbsw.TabIndex = 30;
+            this.label16swbasbsw.Text = "نام خانوادگی";
+            // 
+            // label17vSEVBweb
+            // 
+            this.label17vSEVBweb.AutoSize = true;
+            this.label17vSEVBweb.Location = new System.Drawing.Point(585, 141);
+            this.label17vSEVBweb.Name = "label17vSEVBweb";
+            this.label17vSEVBweb.Size = new System.Drawing.Size(74, 16);
+            this.label17vSEVBweb.TabIndex = 29;
+            this.label17vSEVBweb.Text = "شماره موبایل";
+            // 
+            // label18sabSWBEwe
+            // 
+            this.label18sabSWBEwe.AutoSize = true;
+            this.label18sabSWBEwe.Location = new System.Drawing.Point(617, 111);
+            this.label18sabSWBEwe.Name = "label18sabSWBEwe";
+            this.label18sabSWBEwe.Size = new System.Drawing.Size(42, 16);
+            this.label18sabSWBEwe.TabIndex = 28;
+            this.label18sabSWBEwe.Text = "کد ملی";
+            // 
+            // label19webWEBQEWB
+            // 
+            this.label19webWEBQEWB.AutoSize = true;
+            this.label19webWEBQEWB.Location = new System.Drawing.Point(601, 168);
+            this.label19webWEBQEWB.Name = "label19webWEBQEWB";
+            this.label19webWEBQEWB.Size = new System.Drawing.Size(56, 16);
+            this.label19webWEBQEWB.TabIndex = 27;
+            this.label19webWEBQEWB.Text = "تاریخ تولد";
+            // 
+            // label20WEBwebqe
+            // 
+            this.label20WEBwebqe.AutoSize = true;
+            this.label20WEBwebqe.Location = new System.Drawing.Point(617, 194);
+            this.label20WEBwebqe.Name = "label20WEBwebqe";
+            this.label20WEBwebqe.Size = new System.Drawing.Size(41, 16);
+            this.label20WEBwebqe.TabIndex = 26;
+            this.label20WEBwebqe.Text = "جنسیت";
+            // 
+            // label21xbzdfbzssrb
+            // 
+            this.label21xbzdfbzssrb.AutoSize = true;
+            this.label21xbzdfbzssrb.Location = new System.Drawing.Point(637, 51);
+            this.label21xbzdfbzssrb.Name = "label21xbzdfbzssrb";
+            this.label21xbzdfbzssrb.Size = new System.Drawing.Size(21, 16);
+            this.label21xbzdfbzssrb.TabIndex = 25;
+            this.label21xbzdfbzssrb.Text = "نام";
+            // 
+            // UbrithDate
+            // 
+            this.UbrithDate.Location = new System.Drawing.Point(349, 163);
+            this.UbrithDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UbrithDate.Name = "UbrithDate";
+            this.UbrithDate.Size = new System.Drawing.Size(200, 22);
+            this.UbrithDate.TabIndex = 24;
+            // 
+            // ULName
+            // 
+            this.ULName.Location = new System.Drawing.Point(449, 79);
+            this.ULName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ULName.Name = "ULName";
+            this.ULName.Size = new System.Drawing.Size(100, 22);
+            this.ULName.TabIndex = 23;
+            // 
+            // UidentifyCode
+            // 
+            this.UidentifyCode.Location = new System.Drawing.Point(449, 107);
+            this.UidentifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UidentifyCode.Name = "UidentifyCode";
+            this.UidentifyCode.Size = new System.Drawing.Size(100, 22);
+            this.UidentifyCode.TabIndex = 22;
+            // 
+            // Uphone
+            // 
+            this.Uphone.Location = new System.Drawing.Point(449, 135);
+            this.Uphone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Uphone.Name = "Uphone";
+            this.Uphone.Size = new System.Drawing.Size(100, 22);
+            this.Uphone.TabIndex = 21;
+            // 
+            // UFName
+            // 
+            this.UFName.Location = new System.Drawing.Point(449, 51);
+            this.UFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UFName.Name = "UFName";
+            this.UFName.Size = new System.Drawing.Size(100, 22);
+            this.UFName.TabIndex = 20;
+            // 
+            // UserView
+            // 
+            this.UserView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.emptycelluser,
+            this.UserIDHeader,
+            this.FullNameHeader,
+            this.Uidenifycode,
+            this.BrithdateHeader,
+            this.UphoneNumberheader,
+            this.UgenederHeadaer});
+            this.UserView.FullRowSelect = true;
+            this.UserView.HideSelection = false;
+            this.UserView.Location = new System.Drawing.Point(20, 294);
+            this.UserView.MultiSelect = false;
+            this.UserView.Name = "UserView";
+            this.UserView.RightToLeftLayout = true;
+            this.UserView.Size = new System.Drawing.Size(1060, 203);
+            this.UserView.TabIndex = 19;
+            this.UserView.UseCompatibleStateImageBehavior = false;
+            this.UserView.View = System.Windows.Forms.View.Details;
+            this.UserView.SelectedIndexChanged += new System.EventHandler(this.UserView_SelectedIndexChanged);
+            // 
+            // emptycelluser
+            // 
+            this.emptycelluser.Text = " ";
+            // 
+            // UserIDHeader
+            // 
+            this.UserIDHeader.Text = "شناسه";
+            this.UserIDHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // FullNameHeader
+            // 
+            this.FullNameHeader.Text = "نام و نام خانوادگی";
+            this.FullNameHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.FullNameHeader.Width = 189;
+            // 
+            // Uidenifycode
+            // 
+            this.Uidenifycode.Text = "کد ملی";
+            this.Uidenifycode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // UphoneNumberheader
+            // 
+            this.UphoneNumberheader.DisplayIndex = 3;
+            this.UphoneNumberheader.Text = "شماره تلفن";
+            this.UphoneNumberheader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // BrithdateHeader
+            // 
+            this.BrithdateHeader.Text = "تاریخ تولد";
+            this.BrithdateHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.BrithdateHeader.Width = 31;
+            // 
+            // UgenederHeadaer
+            // 
+            this.UgenederHeadaer.DisplayIndex = 5;
+            this.UgenederHeadaer.Text = "جنیست";
+            this.UgenederHeadaer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SearchUser
             // 
@@ -323,7 +537,7 @@
             // CoId
             // 
             this.CoId.Location = new System.Drawing.Point(855, 46);
-            this.CoId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CoId.Margin = new System.Windows.Forms.Padding(4);
             this.CoId.Name = "CoId";
             this.CoId.Size = new System.Drawing.Size(95, 22);
             this.CoId.TabIndex = 22;
@@ -331,7 +545,7 @@
             // SearchCompany
             // 
             this.SearchCompany.Location = new System.Drawing.Point(739, 110);
-            this.SearchCompany.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchCompany.Margin = new System.Windows.Forms.Padding(4);
             this.SearchCompany.Name = "SearchCompany";
             this.SearchCompany.Size = new System.Drawing.Size(108, 32);
             this.SearchCompany.TabIndex = 21;
@@ -353,7 +567,7 @@
             // SubmitCompany
             // 
             this.SubmitCompany.Location = new System.Drawing.Point(855, 110);
-            this.SubmitCompany.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubmitCompany.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitCompany.Name = "SubmitCompany";
             this.SubmitCompany.Size = new System.Drawing.Size(96, 32);
             this.SubmitCompany.TabIndex = 4;
@@ -384,7 +598,7 @@
             // CoPhone
             // 
             this.CoPhone.Location = new System.Drawing.Point(855, 78);
-            this.CoPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CoPhone.Margin = new System.Windows.Forms.Padding(4);
             this.CoPhone.Name = "CoPhone";
             this.CoPhone.Size = new System.Drawing.Size(95, 22);
             this.CoPhone.TabIndex = 1;
@@ -392,7 +606,7 @@
             // CoName
             // 
             this.CoName.Location = new System.Drawing.Point(855, 11);
-            this.CoName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CoName.Margin = new System.Windows.Forms.Padding(4);
             this.CoName.Name = "CoName";
             this.CoName.Size = new System.Drawing.Size(95, 22);
             this.CoName.TabIndex = 0;
@@ -400,7 +614,7 @@
             // Travel
             // 
             this.Travel.Location = new System.Drawing.Point(4, 25);
-            this.Travel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Travel.Margin = new System.Windows.Forms.Padding(4);
             this.Travel.Name = "Travel";
             this.Travel.Size = new System.Drawing.Size(1103, 521);
             this.Travel.TabIndex = 6;
@@ -425,7 +639,7 @@
             this.Drivers.Controls.Add(this.DriverFname);
             this.Drivers.Controls.Add(this.DriverBirthdate);
             this.Drivers.Location = new System.Drawing.Point(4, 25);
-            this.Drivers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Drivers.Margin = new System.Windows.Forms.Padding(4);
             this.Drivers.Name = "Drivers";
             this.Drivers.Size = new System.Drawing.Size(1103, 521);
             this.Drivers.TabIndex = 3;
@@ -436,7 +650,7 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(163, 289);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(923, 175);
@@ -445,7 +659,7 @@
             // SubmitDriver
             // 
             this.SubmitDriver.Location = new System.Drawing.Point(861, 225);
-            this.SubmitDriver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SubmitDriver.Margin = new System.Windows.Forms.Padding(4);
             this.SubmitDriver.Name = "SubmitDriver";
             this.SubmitDriver.Size = new System.Drawing.Size(100, 30);
             this.SubmitDriver.TabIndex = 15;
@@ -456,7 +670,7 @@
             // SearchDriver
             // 
             this.SearchDriver.Location = new System.Drawing.Point(732, 225);
-            this.SearchDriver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.SearchDriver.Margin = new System.Windows.Forms.Padding(4);
             this.SearchDriver.Name = "SearchDriver";
             this.SearchDriver.Size = new System.Drawing.Size(99, 30);
             this.SearchDriver.TabIndex = 14;
@@ -526,7 +740,7 @@
             // DriverLname
             // 
             this.DriverLname.Location = new System.Drawing.Point(868, 48);
-            this.DriverLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverLname.Margin = new System.Windows.Forms.Padding(4);
             this.DriverLname.Name = "DriverLname";
             this.DriverLname.Size = new System.Drawing.Size(92, 22);
             this.DriverLname.TabIndex = 7;
@@ -534,7 +748,7 @@
             // DriverindentifyCode
             // 
             this.DriverindentifyCode.Location = new System.Drawing.Point(868, 80);
-            this.DriverindentifyCode.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverindentifyCode.Margin = new System.Windows.Forms.Padding(4);
             this.DriverindentifyCode.Name = "DriverindentifyCode";
             this.DriverindentifyCode.Size = new System.Drawing.Size(92, 22);
             this.DriverindentifyCode.TabIndex = 6;
@@ -542,7 +756,7 @@
             // DriverPhone
             // 
             this.DriverPhone.Location = new System.Drawing.Point(868, 146);
-            this.DriverPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverPhone.Margin = new System.Windows.Forms.Padding(4);
             this.DriverPhone.Name = "DriverPhone";
             this.DriverPhone.Size = new System.Drawing.Size(92, 22);
             this.DriverPhone.TabIndex = 4;
@@ -550,7 +764,7 @@
             // DriverLiNo
             // 
             this.DriverLiNo.Location = new System.Drawing.Point(868, 178);
-            this.DriverLiNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverLiNo.Margin = new System.Windows.Forms.Padding(4);
             this.DriverLiNo.Name = "DriverLiNo";
             this.DriverLiNo.Size = new System.Drawing.Size(92, 22);
             this.DriverLiNo.TabIndex = 3;
@@ -558,7 +772,7 @@
             // DriverFname
             // 
             this.DriverFname.Location = new System.Drawing.Point(868, 16);
-            this.DriverFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverFname.Margin = new System.Windows.Forms.Padding(4);
             this.DriverFname.Name = "DriverFname";
             this.DriverFname.Size = new System.Drawing.Size(92, 22);
             this.DriverFname.TabIndex = 1;
@@ -566,7 +780,7 @@
             // DriverBirthdate
             // 
             this.DriverBirthdate.Location = new System.Drawing.Point(695, 114);
-            this.DriverBirthdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DriverBirthdate.Margin = new System.Windows.Forms.Padding(4);
             this.DriverBirthdate.Name = "DriverBirthdate";
             this.DriverBirthdate.Size = new System.Drawing.Size(265, 22);
             this.DriverBirthdate.TabIndex = 0;
@@ -574,7 +788,7 @@
             // Bus
             // 
             this.Bus.Location = new System.Drawing.Point(4, 25);
-            this.Bus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Bus.Margin = new System.Windows.Forms.Padding(4);
             this.Bus.Name = "Bus";
             this.Bus.Size = new System.Drawing.Size(1103, 521);
             this.Bus.TabIndex = 4;
@@ -584,7 +798,7 @@
             // Providing
             // 
             this.Providing.Location = new System.Drawing.Point(4, 25);
-            this.Providing.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Providing.Margin = new System.Windows.Forms.Padding(4);
             this.Providing.Name = "Providing";
             this.Providing.Size = new System.Drawing.Size(1103, 521);
             this.Providing.TabIndex = 5;
@@ -606,160 +820,6 @@
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 294);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1060, 203);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // cancelupdateuser
-            // 
-            this.cancelupdateuser.Location = new System.Drawing.Point(329, 236);
-            this.cancelupdateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cancelupdateuser.Name = "cancelupdateuser";
-            this.cancelupdateuser.Size = new System.Drawing.Size(100, 23);
-            this.cancelupdateuser.TabIndex = 33;
-            this.cancelupdateuser.Text = "لغو";
-            this.cancelupdateuser.UseVisualStyleBackColor = true;
-            // 
-            // updateuser
-            // 
-            this.updateuser.Location = new System.Drawing.Point(449, 236);
-            this.updateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateuser.Name = "updateuser";
-            this.updateuser.Size = new System.Drawing.Size(100, 23);
-            this.updateuser.TabIndex = 32;
-            this.updateuser.Text = "بروزرسانی";
-            this.updateuser.UseVisualStyleBackColor = true;
-            // 
-            // Ugender
-            // 
-            this.Ugender.FormattingEnabled = true;
-            this.Ugender.Items.AddRange(new object[] {
-            "زن",
-            "مرد"});
-            this.Ugender.Location = new System.Drawing.Point(449, 194);
-            this.Ugender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Ugender.Name = "Ugender";
-            this.Ugender.Size = new System.Drawing.Size(100, 24);
-            this.Ugender.TabIndex = 31;
-            this.Ugender.Text = "انتخاب کنید";
-            // 
-            // label16swbasbsw
-            // 
-            this.label16swbasbsw.AutoSize = true;
-            this.label16swbasbsw.Location = new System.Drawing.Point(585, 82);
-            this.label16swbasbsw.Name = "label16swbasbsw";
-            this.label16swbasbsw.Size = new System.Drawing.Size(73, 16);
-            this.label16swbasbsw.TabIndex = 30;
-            this.label16swbasbsw.Text = "نام خانوادگی";
-            // 
-            // label17vSEVBweb
-            // 
-            this.label17vSEVBweb.AutoSize = true;
-            this.label17vSEVBweb.Location = new System.Drawing.Point(585, 141);
-            this.label17vSEVBweb.Name = "label17vSEVBweb";
-            this.label17vSEVBweb.Size = new System.Drawing.Size(74, 16);
-            this.label17vSEVBweb.TabIndex = 29;
-            this.label17vSEVBweb.Text = "شماره موبایل";
-            // 
-            // label18sabSWBEwe
-            // 
-            this.label18sabSWBEwe.AutoSize = true;
-            this.label18sabSWBEwe.Location = new System.Drawing.Point(617, 111);
-            this.label18sabSWBEwe.Name = "label18sabSWBEwe";
-            this.label18sabSWBEwe.Size = new System.Drawing.Size(42, 16);
-            this.label18sabSWBEwe.TabIndex = 28;
-            this.label18sabSWBEwe.Text = "کد ملی";
-            // 
-            // label19webWEBQEWB
-            // 
-            this.label19webWEBQEWB.AutoSize = true;
-            this.label19webWEBQEWB.Location = new System.Drawing.Point(601, 168);
-            this.label19webWEBQEWB.Name = "label19webWEBQEWB";
-            this.label19webWEBQEWB.Size = new System.Drawing.Size(56, 16);
-            this.label19webWEBQEWB.TabIndex = 27;
-            this.label19webWEBQEWB.Text = "تاریخ تولد";
-            // 
-            // label20WEBwebqe
-            // 
-            this.label20WEBwebqe.AutoSize = true;
-            this.label20WEBwebqe.Location = new System.Drawing.Point(617, 194);
-            this.label20WEBwebqe.Name = "label20WEBwebqe";
-            this.label20WEBwebqe.Size = new System.Drawing.Size(41, 16);
-            this.label20WEBwebqe.TabIndex = 26;
-            this.label20WEBwebqe.Text = "جنسیت";
-            // 
-            // label21xbzdfbzssrb
-            // 
-            this.label21xbzdfbzssrb.AutoSize = true;
-            this.label21xbzdfbzssrb.Location = new System.Drawing.Point(637, 51);
-            this.label21xbzdfbzssrb.Name = "label21xbzdfbzssrb";
-            this.label21xbzdfbzssrb.Size = new System.Drawing.Size(21, 16);
-            this.label21xbzdfbzssrb.TabIndex = 25;
-            this.label21xbzdfbzssrb.Text = "نام";
-            // 
-            // UbrithDate
-            // 
-            this.UbrithDate.Location = new System.Drawing.Point(349, 163);
-            this.UbrithDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UbrithDate.Name = "UbrithDate";
-            this.UbrithDate.Size = new System.Drawing.Size(200, 22);
-            this.UbrithDate.TabIndex = 24;
-            // 
-            // ULName
-            // 
-            this.ULName.Location = new System.Drawing.Point(449, 79);
-            this.ULName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ULName.Name = "ULName";
-            this.ULName.Size = new System.Drawing.Size(100, 22);
-            this.ULName.TabIndex = 23;
-            // 
-            // UidentifyCode
-            // 
-            this.UidentifyCode.Location = new System.Drawing.Point(449, 107);
-            this.UidentifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UidentifyCode.Name = "UidentifyCode";
-            this.UidentifyCode.Size = new System.Drawing.Size(100, 22);
-            this.UidentifyCode.TabIndex = 22;
-            // 
-            // Uphone
-            // 
-            this.Uphone.Location = new System.Drawing.Point(449, 135);
-            this.Uphone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Uphone.Name = "Uphone";
-            this.Uphone.Size = new System.Drawing.Size(100, 22);
-            this.Uphone.TabIndex = 21;
-            // 
-            // UFName
-            // 
-            this.UFName.Location = new System.Drawing.Point(449, 51);
-            this.UFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UFName.Name = "UFName";
-            this.UFName.Size = new System.Drawing.Size(100, 22);
-            this.UFName.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(617, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "شناسه";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(449, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 34;
             // 
             // Main
             // 
@@ -846,9 +906,16 @@
         private System.Windows.Forms.TextBox UidentifyCode;
         private System.Windows.Forms.TextBox Uphone;
         private System.Windows.Forms.TextBox UFName;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView UserView;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox UUSerID;
+        private System.Windows.Forms.ColumnHeader emptycelluser;
+        private System.Windows.Forms.ColumnHeader UserIDHeader;
+        private System.Windows.Forms.ColumnHeader FullNameHeader;
+        private System.Windows.Forms.ColumnHeader Uidenifycode;
+        private System.Windows.Forms.ColumnHeader UphoneNumberheader;
+        private System.Windows.Forms.ColumnHeader BrithdateHeader;
+        private System.Windows.Forms.ColumnHeader UgenederHeadaer;
     }
 }
 
