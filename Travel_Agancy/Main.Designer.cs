@@ -73,12 +73,14 @@
             this.label15 = new System.Windows.Forms.Label();
             this.SearchDriver = new System.Windows.Forms.Button();
             this.SubmitDriver = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
             this.TaavoniTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).BeginInit();
             this.Drivers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabular
@@ -380,6 +382,7 @@
             // 
             // Drivers
             // 
+            this.Drivers.Controls.Add(this.dataGridView1);
             this.Drivers.Controls.Add(this.SubmitDriver);
             this.Drivers.Controls.Add(this.SearchDriver);
             this.Drivers.Controls.Add(this.label15);
@@ -521,6 +524,14 @@
             this.SubmitDriver.UseVisualStyleBackColor = true;
             this.SubmitDriver.Click += new System.EventHandler(this.SubmitDriver_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(122, 235);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(692, 142);
+            this.dataGridView1.TabIndex = 16;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -539,6 +550,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).EndInit();
             this.Drivers.ResumeLayout(false);
             this.Drivers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -589,6 +601,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button SubmitDriver;
         private System.Windows.Forms.Button SearchDriver;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
