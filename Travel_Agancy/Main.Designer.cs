@@ -868,12 +868,12 @@
             // 
             // listView1
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(20, 294);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1060, 203);
-            this.listView1.TabIndex = 19;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            //this.listView1.HideSelection = false;
+            //this.listView1.Location = new System.Drawing.Point(20, 294);
+            //this.listView1.Name = "listView1";
+            //this.listView1.Size = new System.Drawing.Size(1060, 203);
+            //this.listView1.TabIndex = 19;
+            //this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // cancelupdateuser
             // 
@@ -1031,19 +1031,19 @@
             this.Travel.TabIndex = 6;
             this.Travel.Text = "سفر ها";
             this.Travel.UseVisualStyleBackColor = true;
-            this.textBox1.Location = new System.Drawing.Point(449, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 34;
+         //   this.textBox1.Location = new System.Drawing.Point(449, 25);
+           // this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+         //   this.textBox1.Name = "textBox1";
+         //   this.textBox1.ReadOnly = true;
+          //  this.textBox1.Size = new System.Drawing.Size(100, 22);
+          //  this.textBox1.TabIndex = 34;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(682, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(65, 20);
-            this.textBox1.TabIndex = 0;
+        //    this.textBox1.Location = new System.Drawing.Point(682, 16);
+       //     this.textBox1.Name = "textBox1";
+       //     this.textBox1.Size = new System.Drawing.Size(65, 20);
+       //     this.textBox1.TabIndex = 0;
             // 
             // textBox4
             // 
@@ -1302,7 +1302,7 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox1;
+       private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button SearchTravel;
         private System.Windows.Forms.Button SubmitTravel;
