@@ -573,7 +573,7 @@
             this.Controls.Add(this.MainTabular);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
-            this.Text = "آزانیس مسافربری";
+            this.Text = "آژانس مسافربری";
             this.MainTabular.ResumeLayout(false);
             this.UsersTab.ResumeLayout(false);
             this.UsersTab.PerformLayout();
