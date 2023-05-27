@@ -89,6 +89,16 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SubmitTravel = new System.Windows.Forms.Button();
             this.SearchTravel = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
@@ -96,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).BeginInit();
             this.Drivers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Bus.SuspendLayout();
             this.Travel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -553,6 +564,16 @@
             // 
             // Bus
             // 
+            this.Bus.Controls.Add(this.button2);
+            this.Bus.Controls.Add(this.button1);
+            this.Bus.Controls.Add(this.label24);
+            this.Bus.Controls.Add(this.label23);
+            this.Bus.Controls.Add(this.label22);
+            this.Bus.Controls.Add(this.label20);
+            this.Bus.Controls.Add(this.textBox9);
+            this.Bus.Controls.Add(this.textBox8);
+            this.Bus.Controls.Add(this.textBox7);
+            this.Bus.Controls.Add(this.textBox2);
             this.Bus.Location = new System.Drawing.Point(4, 22);
             this.Bus.Name = "Bus";
             this.Bus.Size = new System.Drawing.Size(825, 421);
@@ -681,12 +702,94 @@
             // 
             // SearchTravel
             // 
-            this.SearchTravel.Location = new System.Drawing.Point(567, 156);
+            this.SearchTravel.Location = new System.Drawing.Point(563, 156);
             this.SearchTravel.Name = "SearchTravel";
             this.SearchTravel.Size = new System.Drawing.Size(84, 23);
             this.SearchTravel.TabIndex = 14;
             this.SearchTravel.Text = "جستجو";
             this.SearchTravel.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(661, 15);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(69, 20);
+            this.textBox2.TabIndex = 0;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(661, 93);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(69, 20);
+            this.textBox7.TabIndex = 2;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(661, 67);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(69, 20);
+            this.textBox8.TabIndex = 3;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(661, 41);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(69, 20);
+            this.textBox9.TabIndex = 4;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(751, 96);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(64, 13);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "تعداد صندلی";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(790, 70);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(25, 13);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "پلاک";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(791, 44);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 13);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "مدل";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(791, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(24, 13);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "نوع";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(576, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "جستجو";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(661, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "ثبت";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -707,6 +810,8 @@
             this.Drivers.ResumeLayout(false);
             this.Drivers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Bus.ResumeLayout(false);
+            this.Bus.PerformLayout();
             this.Travel.ResumeLayout(false);
             this.Travel.PerformLayout();
             this.ResumeLayout(false);
@@ -775,6 +880,16 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button SearchTravel;
         private System.Windows.Forms.Button SubmitTravel;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
