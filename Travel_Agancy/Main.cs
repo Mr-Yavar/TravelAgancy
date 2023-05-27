@@ -140,5 +140,53 @@ namespace Travel_Agancy
 
             UserGridView.DataSource = list;
         }
+
+        private void SubmitCompany_Click(object sender, EventArgs e)
+        {
+            int Co_Nu =Convert.ToInt32(CoId.Text.Trim());
+            string Co_name = CoName.Text.Trim();
+            string Co_phone =CoPhone.Text.Trim();
+
+
+            travelAgencyEntities db = new travelAgencyEntities();
+
+
+            company NewCo = new company()
+            {
+                name = Co_name,
+                phone = Co_phone,
+
+
+            };
+
+            try
+            {
+                db.companies.Add(NewCo);
+            }
+            catch (Exception ex)
+            {
+
+            }
+            db.SaveChanges();
+            
+            
+            RefreshCoGrid();
+        }
+        private void RefreshCoGrid()
+        {
+            travelAgencyEntities db = new travelAgencyEntities();
+            CompanyGridView.DataSource = (from Co in db.companies
+                                       select new
+                                       {
+
+                                           ID = Co.id,
+                                           Name = Co.name,
+                                           Phone = Co.phone,
+ 
+                                       }).ToList();
+        }
+
+        
+
     }
 }
