@@ -52,8 +52,8 @@
             this.UserIDHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FullNameHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Uidenifycode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.UphoneNumberheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.BrithdateHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.UphoneNumberheader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.UgenederHeadaer = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SearchUser = new System.Windows.Forms.Button();
             this.SubmitUser = new System.Windows.Forms.Button();
@@ -80,6 +80,17 @@
             this.CoPhone = new System.Windows.Forms.TextBox();
             this.CoName = new System.Windows.Forms.TextBox();
             this.Travel = new System.Windows.Forms.TabPage();
+            this.SearchTravel = new System.Windows.Forms.Button();
+            this.SubmitTravel = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.Drivers = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SubmitDriver = new System.Windows.Forms.Button();
@@ -97,41 +108,28 @@
             this.DriverFname = new System.Windows.Forms.TextBox();
             this.DriverBirthdate = new System.Windows.Forms.DateTimePicker();
             this.Bus = new System.Windows.Forms.TabPage();
-            this.Providing = new System.Windows.Forms.TabPage();
-            this.Travel = new System.Windows.Forms.TabPage();
-            //this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label2000 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.SubmitTravel = new System.Windows.Forms.Button();
-            this.SearchTravel = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Providing = new System.Windows.Forms.TabPage();
+            this.label2000 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             this.TaavoniTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).BeginInit();
+            this.Travel.SuspendLayout();
             this.Drivers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Bus.SuspendLayout();
-            this.Travel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabular
@@ -143,8 +141,6 @@
             this.MainTabular.Controls.Add(this.Bus);
             this.MainTabular.Controls.Add(this.tabPage1);
             this.MainTabular.Controls.Add(this.Providing);
-            this.MainTabular.Location = new System.Drawing.Point(11, 11);
-            this.MainTabular.Margin = new System.Windows.Forms.Padding(2);
             this.MainTabular.Location = new System.Drawing.Point(15, 14);
             this.MainTabular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainTabular.Name = "MainTabular";
@@ -240,6 +236,8 @@
             // 
             this.Ugender.FormattingEnabled = true;
             this.Ugender.Items.AddRange(new object[] {
+            "زن",
+            "مرد",
             "زن",
             "مرد"});
             this.Ugender.Location = new System.Drawing.Point(449, 194);
@@ -385,21 +383,19 @@
             this.Uidenifycode.Text = "کد ملی";
             this.Uidenifycode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // UphoneNumberheader
-            // 
-            this.UphoneNumberheader.DisplayIndex = 3;
-            this.UphoneNumberheader.Text = "شماره تلفن";
-            this.UphoneNumberheader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // BrithdateHeader
             // 
             this.BrithdateHeader.Text = "تاریخ تولد";
             this.BrithdateHeader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.BrithdateHeader.Width = 31;
             // 
+            // UphoneNumberheader
+            // 
+            this.UphoneNumberheader.Text = "شماره تلفن";
+            this.UphoneNumberheader.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // UgenederHeadaer
             // 
-            this.UgenederHeadaer.DisplayIndex = 5;
             this.UgenederHeadaer.Text = "جنیست";
             this.UgenederHeadaer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -579,6 +575,7 @@
             this.SearchCompany.TabIndex = 21;
             this.SearchCompany.Text = "جستجو";
             this.SearchCompany.UseVisualStyleBackColor = true;
+            this.SearchCompany.Click += new System.EventHandler(this.SearchCompany_Click);
             // 
             // CompanyGridView
             // 
@@ -618,16 +615,9 @@
             this.label1000.AutoSize = true;
             this.label1000.Location = new System.Drawing.Point(720, 66);
             this.label1000.Name = "label1000";
-            this.label1000.Size = new System.Drawing.Size(95, 13);
+            this.label1000.Size = new System.Drawing.Size(99, 16);
             this.label1000.TabIndex = 2;
             this.label1000.Text = "شماره تلفن تعاونی";
-            this.label2000.AutoSize = true;
-            this.label2000.Location = new System.Drawing.Point(960, 81);
-            this.label2000.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2000.Name = "label2";
-            this.label2000.Size = new System.Drawing.Size(99, 16);
-            this.label2000.TabIndex = 2;
-            this.label2000.Text = "شماره تلفن تعاونی";
             // 
             // CoPhone
             // 
@@ -647,6 +637,17 @@
             // 
             // Travel
             // 
+            this.Travel.Controls.Add(this.SearchTravel);
+            this.Travel.Controls.Add(this.SubmitTravel);
+            this.Travel.Controls.Add(this.dateTimePicker1);
+            this.Travel.Controls.Add(this.label21);
+            this.Travel.Controls.Add(this.label19);
+            this.Travel.Controls.Add(this.label18);
+            this.Travel.Controls.Add(this.label17);
+            this.Travel.Controls.Add(this.label16);
+            this.Travel.Controls.Add(this.textBox6);
+            this.Travel.Controls.Add(this.textBox5);
+            this.Travel.Controls.Add(this.textBox4);
             this.Travel.Location = new System.Drawing.Point(4, 25);
             this.Travel.Margin = new System.Windows.Forms.Padding(4);
             this.Travel.Name = "Travel";
@@ -654,6 +655,97 @@
             this.Travel.TabIndex = 6;
             this.Travel.Text = "سفر ها";
             this.Travel.UseVisualStyleBackColor = true;
+            // 
+            // SearchTravel
+            // 
+            this.SearchTravel.Location = new System.Drawing.Point(563, 156);
+            this.SearchTravel.Name = "SearchTravel";
+            this.SearchTravel.Size = new System.Drawing.Size(84, 23);
+            this.SearchTravel.TabIndex = 14;
+            this.SearchTravel.Text = "جستجو";
+            this.SearchTravel.UseVisualStyleBackColor = true;
+            // 
+            // SubmitTravel
+            // 
+            this.SubmitTravel.Location = new System.Drawing.Point(666, 156);
+            this.SubmitTravel.Name = "SubmitTravel";
+            this.SubmitTravel.Size = new System.Drawing.Size(81, 23);
+            this.SubmitTravel.TabIndex = 13;
+            this.SubmitTravel.Text = "ثبت";
+            this.SubmitTravel.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(547, 123);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(783, 123);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(35, 16);
+            this.label21.TabIndex = 11;
+            this.label21.Text = "تاریخ";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(787, 97);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(31, 16);
+            this.label19.TabIndex = 9;
+            this.label19.Text = "زمان";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(764, 71);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(53, 16);
+            this.label18.TabIndex = 8;
+            this.label18.Text = "قیمت بلیط";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(784, 45);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(33, 16);
+            this.label17.TabIndex = 7;
+            this.label17.Text = "مقصد";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(791, 19);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(25, 16);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "مبدا";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(682, 42);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(65, 22);
+            this.textBox6.TabIndex = 5;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(682, 68);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(65, 22);
+            this.textBox5.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(682, 94);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(65, 22);
+            this.textBox4.TabIndex = 3;
             // 
             // Drivers
             // 
@@ -831,7 +923,6 @@
             this.Bus.Controls.Add(this.textBox8);
             this.Bus.Controls.Add(this.textBox7);
             this.Bus.Controls.Add(this.textBox2);
-            this.Bus.Location = new System.Drawing.Point(4, 22);
             this.Bus.Location = new System.Drawing.Point(4, 25);
             this.Bus.Margin = new System.Windows.Forms.Padding(4);
             this.Bus.Name = "Bus";
@@ -840,15 +931,87 @@
             this.Bus.Text = "اتوبوس";
             this.Bus.UseVisualStyleBackColor = true;
             // 
-            // Providing
+            // button2
             // 
-            this.Providing.Location = new System.Drawing.Point(4, 25);
-            this.Providing.Margin = new System.Windows.Forms.Padding(4);
-            this.Providing.Name = "Providing";
-            this.Providing.Size = new System.Drawing.Size(1103, 521);
-            this.Providing.TabIndex = 5;
-            this.Providing.Text = "فراهم کردن";
-            this.Providing.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(661, 131);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 23);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "ثبت";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(576, 131);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "جستجو";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(791, 18);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(25, 16);
+            this.label24.TabIndex = 9;
+            this.label24.Text = "نوع";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(791, 44);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(25, 16);
+            this.label23.TabIndex = 8;
+            this.label23.Text = "مدل";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(790, 70);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(28, 16);
+            this.label22.TabIndex = 7;
+            this.label22.Text = "پلاک";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(751, 96);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(65, 16);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "تعداد صندلی";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(661, 41);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(69, 22);
+            this.textBox9.TabIndex = 4;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(661, 67);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(69, 22);
+            this.textBox8.TabIndex = 3;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(661, 93);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(69, 22);
+            this.textBox7.TabIndex = 2;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(661, 15);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(69, 22);
+            this.textBox2.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -860,363 +1023,31 @@
             this.tabPage1.Text = "رزرو ها";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // Providing
+            // 
+            this.Providing.Location = new System.Drawing.Point(4, 25);
+            this.Providing.Margin = new System.Windows.Forms.Padding(4);
+            this.Providing.Name = "Providing";
+            this.Providing.Size = new System.Drawing.Size(1103, 521);
+            this.Providing.TabIndex = 5;
+            this.Providing.Text = "فراهم کردن";
+            this.Providing.UseVisualStyleBackColor = true;
+            // 
+            // label2000
+            // 
+            this.label2000.AutoSize = true;
+            this.label2000.Location = new System.Drawing.Point(960, 81);
+            this.label2000.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2000.Name = "label2000";
+            this.label2000.Size = new System.Drawing.Size(99, 16);
+            this.label2000.TabIndex = 2;
+            this.label2000.Text = "شماره تلفن تعاونی";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // listView1
-            // 
-            //this.listView1.HideSelection = false;
-            //this.listView1.Location = new System.Drawing.Point(20, 294);
-            //this.listView1.Name = "listView1";
-            //this.listView1.Size = new System.Drawing.Size(1060, 203);
-            //this.listView1.TabIndex = 19;
-            //this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // cancelupdateuser
-            // 
-            this.cancelupdateuser.Location = new System.Drawing.Point(329, 236);
-            this.cancelupdateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cancelupdateuser.Name = "cancelupdateuser";
-            this.cancelupdateuser.Size = new System.Drawing.Size(100, 23);
-            this.cancelupdateuser.TabIndex = 33;
-            this.cancelupdateuser.Text = "لغو";
-            this.cancelupdateuser.UseVisualStyleBackColor = true;
-            // 
-            // updateuser
-            // 
-            this.updateuser.Location = new System.Drawing.Point(449, 236);
-            this.updateuser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateuser.Name = "updateuser";
-            this.updateuser.Size = new System.Drawing.Size(100, 23);
-            this.updateuser.TabIndex = 32;
-            this.updateuser.Text = "بروزرسانی";
-            this.updateuser.UseVisualStyleBackColor = true;
-            // 
-            // Ugender
-            // 
-            this.Ugender.FormattingEnabled = true;
-            this.Ugender.Items.AddRange(new object[] {
-            "زن",
-            "مرد"});
-            this.Ugender.Location = new System.Drawing.Point(449, 194);
-            this.Ugender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Ugender.Name = "Ugender";
-            this.Ugender.Size = new System.Drawing.Size(100, 24);
-            this.Ugender.TabIndex = 31;
-            this.Ugender.Text = "انتخاب کنید";
-            // 
-            // label16swbasbsw
-            // 
-            this.label16swbasbsw.AutoSize = true;
-            this.label16swbasbsw.Location = new System.Drawing.Point(585, 82);
-            this.label16swbasbsw.Name = "label16swbasbsw";
-            this.label16swbasbsw.Size = new System.Drawing.Size(73, 16);
-            this.label16swbasbsw.TabIndex = 30;
-            this.label16swbasbsw.Text = "نام خانوادگی";
-            // 
-            // label17vSEVBweb
-            // 
-            this.label17vSEVBweb.AutoSize = true;
-            this.label17vSEVBweb.Location = new System.Drawing.Point(585, 141);
-            this.label17vSEVBweb.Name = "label17vSEVBweb";
-            this.label17vSEVBweb.Size = new System.Drawing.Size(74, 16);
-            this.label17vSEVBweb.TabIndex = 29;
-            this.label17vSEVBweb.Text = "شماره موبایل";
-            // 
-            // label18sabSWBEwe
-            // 
-            this.label18sabSWBEwe.AutoSize = true;
-            this.label18sabSWBEwe.Location = new System.Drawing.Point(617, 111);
-            this.label18sabSWBEwe.Name = "label18sabSWBEwe";
-            this.label18sabSWBEwe.Size = new System.Drawing.Size(42, 16);
-            this.label18sabSWBEwe.TabIndex = 28;
-            this.label18sabSWBEwe.Text = "کد ملی";
-            // 
-            // label19webWEBQEWB
-            // 
-            this.label19webWEBQEWB.AutoSize = true;
-            this.label19webWEBQEWB.Location = new System.Drawing.Point(601, 168);
-            this.label19webWEBQEWB.Name = "label19webWEBQEWB";
-            this.label19webWEBQEWB.Size = new System.Drawing.Size(56, 16);
-            this.label19webWEBQEWB.TabIndex = 27;
-            this.label19webWEBQEWB.Text = "تاریخ تولد";
-            // 
-            // label20WEBwebqe
-            // 
-            this.label20WEBwebqe.AutoSize = true;
-            this.label20WEBwebqe.Location = new System.Drawing.Point(617, 194);
-            this.label20WEBwebqe.Name = "label20WEBwebqe";
-            this.label20WEBwebqe.Size = new System.Drawing.Size(41, 16);
-            this.label20WEBwebqe.TabIndex = 26;
-            this.label20WEBwebqe.Text = "جنسیت";
-            // 
-            // label21xbzdfbzssrb
-            // 
-            this.label21xbzdfbzssrb.AutoSize = true;
-            this.label21xbzdfbzssrb.Location = new System.Drawing.Point(637, 51);
-            this.label21xbzdfbzssrb.Name = "label21xbzdfbzssrb";
-            this.label21xbzdfbzssrb.Size = new System.Drawing.Size(21, 16);
-            this.label21xbzdfbzssrb.TabIndex = 25;
-            this.label21xbzdfbzssrb.Text = "نام";
-            // 
-            // UbrithDate
-            // 
-            this.UbrithDate.Location = new System.Drawing.Point(349, 163);
-            this.UbrithDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UbrithDate.Name = "UbrithDate";
-            this.UbrithDate.Size = new System.Drawing.Size(200, 22);
-            this.UbrithDate.TabIndex = 24;
-            // 
-            // ULName
-            // 
-            this.ULName.Location = new System.Drawing.Point(449, 79);
-            this.ULName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.ULName.Name = "ULName";
-            this.ULName.Size = new System.Drawing.Size(100, 22);
-            this.ULName.TabIndex = 23;
-            // 
-            // UidentifyCode
-            // 
-            this.UidentifyCode.Location = new System.Drawing.Point(449, 107);
-            this.UidentifyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UidentifyCode.Name = "UidentifyCode";
-            this.UidentifyCode.Size = new System.Drawing.Size(100, 22);
-            this.UidentifyCode.TabIndex = 22;
-            // 
-            // Uphone
-            // 
-            this.Uphone.Location = new System.Drawing.Point(449, 135);
-            this.Uphone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Uphone.Name = "Uphone";
-            this.Uphone.Size = new System.Drawing.Size(100, 22);
-            this.Uphone.TabIndex = 21;
-            // 
-            // UFName
-            // 
-            this.UFName.Location = new System.Drawing.Point(449, 51);
-            this.UFName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.UFName.Name = "UFName";
-            this.UFName.Size = new System.Drawing.Size(100, 22);
-            this.UFName.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(617, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "شناسه";
-            // 
-            // textBox1
-            // 
-            this.Travel.Controls.Add(this.SearchTravel);
-            this.Travel.Controls.Add(this.SubmitTravel);
-            this.Travel.Controls.Add(this.dateTimePicker1);
-            this.Travel.Controls.Add(this.label21);
-            this.Travel.Controls.Add(this.label19);
-            this.Travel.Controls.Add(this.label18);
-            this.Travel.Controls.Add(this.label17);
-            this.Travel.Controls.Add(this.label16);
-            this.Travel.Controls.Add(this.textBox6);
-            this.Travel.Controls.Add(this.textBox5);
-            this.Travel.Controls.Add(this.textBox4);
-            this.Travel.Controls.Add(this.textBox1);
-            this.Travel.Location = new System.Drawing.Point(4, 22);
-            this.Travel.Name = "Travel";
-            this.Travel.Size = new System.Drawing.Size(825, 421);
-            this.Travel.TabIndex = 6;
-            this.Travel.Text = "سفر ها";
-            this.Travel.UseVisualStyleBackColor = true;
-         //   this.textBox1.Location = new System.Drawing.Point(449, 25);
-           // this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-         //   this.textBox1.Name = "textBox1";
-         //   this.textBox1.ReadOnly = true;
-          //  this.textBox1.Size = new System.Drawing.Size(100, 22);
-          //  this.textBox1.TabIndex = 34;
-            // 
-            // textBox1
-            // 
-        //    this.textBox1.Location = new System.Drawing.Point(682, 16);
-       //     this.textBox1.Name = "textBox1";
-       //     this.textBox1.Size = new System.Drawing.Size(65, 20);
-       //     this.textBox1.TabIndex = 0;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(682, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 20);
-            this.textBox4.TabIndex = 3;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(682, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 20);
-            this.textBox5.TabIndex = 4;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(682, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(65, 20);
-            this.textBox6.TabIndex = 5;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(791, 19);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(24, 13);
-            this.label16.TabIndex = 6;
-            this.label16.Text = "مبدا";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(784, 45);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(31, 13);
-            this.label17.TabIndex = 7;
-            this.label17.Text = "مقصد";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(764, 71);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(51, 13);
-            this.label18.TabIndex = 8;
-            this.label18.Text = "قیمت بلیط";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(787, 97);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(28, 13);
-            this.label19.TabIndex = 9;
-            this.label19.Text = "زمان";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(783, 123);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(32, 13);
-            this.label21.TabIndex = 11;
-            this.label21.Text = "تاریخ";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(547, 123);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // SubmitTravel
-            // 
-            this.SubmitTravel.Location = new System.Drawing.Point(666, 156);
-            this.SubmitTravel.Name = "SubmitTravel";
-            this.SubmitTravel.Size = new System.Drawing.Size(81, 23);
-            this.SubmitTravel.TabIndex = 13;
-            this.SubmitTravel.Text = "ثبت";
-            this.SubmitTravel.UseVisualStyleBackColor = true;
-            // 
-            // SearchTravel
-            // 
-            this.SearchTravel.Location = new System.Drawing.Point(563, 156);
-            this.SearchTravel.Name = "SearchTravel";
-            this.SearchTravel.Size = new System.Drawing.Size(84, 23);
-            this.SearchTravel.TabIndex = 14;
-            this.SearchTravel.Text = "جستجو";
-            this.SearchTravel.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(661, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(69, 20);
-            this.textBox2.TabIndex = 0;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(661, 93);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(69, 20);
-            this.textBox7.TabIndex = 2;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(661, 67);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(69, 20);
-            this.textBox8.TabIndex = 3;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(661, 41);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(69, 20);
-            this.textBox9.TabIndex = 4;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(751, 96);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(64, 13);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "تعداد صندلی";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(790, 70);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(25, 13);
-            this.label22.TabIndex = 7;
-            this.label22.Text = "پلاک";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(791, 44);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(24, 13);
-            this.label23.TabIndex = 8;
-            this.label23.Text = "مدل";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(791, 18);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(24, 13);
-            this.label24.TabIndex = 9;
-            this.label24.Text = "نوع";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(576, 131);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "جستجو";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(661, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "ثبت";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -1233,13 +1064,13 @@
             this.TaavoniTab.ResumeLayout(false);
             this.TaavoniTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CompanyGridView)).EndInit();
+            this.Travel.ResumeLayout(false);
+            this.Travel.PerformLayout();
             this.Drivers.ResumeLayout(false);
             this.Drivers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Bus.ResumeLayout(false);
             this.Bus.PerformLayout();
-            this.Travel.ResumeLayout(false);
-            this.Travel.PerformLayout();
             this.ResumeLayout(false);
 
         }

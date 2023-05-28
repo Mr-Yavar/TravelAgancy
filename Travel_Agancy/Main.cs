@@ -18,7 +18,7 @@ namespace Travel_Agancy
         {
             InitializeComponent();
             RefreshGrid();
-
+            RefreshCoGrid();
 
 
 
@@ -284,6 +284,30 @@ namespace Travel_Agancy
             UbrithDate.Text = "";
             Uphone.Text = "";
             Ugender.Text = "";
+        }
+
+        private void SearchCompany_Click(object sender, EventArgs e)
+        {
+            int Co_Nu = Convert.ToInt32(CoId.Text.Trim()=="" ? "0" : CoId.Text.Trim());
+            string Co_name = CoName.Text.Trim();
+            string Co_phone = CoPhone.Text.Trim();
+
+
+            travelAgencyEntities db = new travelAgencyEntities();
+            var list = (from Com in db.companies select Com);
+
+            if (CoId.Text != "")
+                list= list.Where(x => x.id == Co_Nu);
+
+            if (Co_name != "")
+            {
+                list = list.Where(x => x.name.StartsWith(Co_name));
+            }
+
+            if(Co_phone !="")
+                list = list.Where(x => x.phone.StartsWith(Co_phone));
+
+            CompanyGridView.DataSource = list.ToList();
         }
     }
 }
