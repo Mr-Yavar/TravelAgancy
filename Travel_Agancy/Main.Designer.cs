@@ -82,15 +82,15 @@
             this.Travel = new System.Windows.Forms.TabPage();
             this.SearchTravel = new System.Windows.Forms.Button();
             this.SubmitTravel = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.traveldate = new System.Windows.Forms.DateTimePicker();
             this.label21 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Dest = new System.Windows.Forms.TextBox();
+            this.price = new System.Windows.Forms.TextBox();
+            this.traveltime = new System.Windows.Forms.TextBox();
             this.Drivers = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SubmitDriver = new System.Windows.Forms.Button();
@@ -122,6 +122,8 @@
             this.Providing = new System.Windows.Forms.TabPage();
             this.label2000 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Mabda = new System.Windows.Forms.TextBox();
+            this.TravelGrid = new System.Windows.Forms.DataGridView();
             this.MainTabular.SuspendLayout();
             this.UsersTab.SuspendLayout();
             this.TaavoniTab.SuspendLayout();
@@ -130,6 +132,7 @@
             this.Drivers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Bus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TravelGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // MainTabular
@@ -613,7 +616,7 @@
             // label1000
             // 
             this.label1000.AutoSize = true;
-            this.label1000.Location = new System.Drawing.Point(720, 66);
+            this.label1000.Location = new System.Drawing.Point(967, 78);
             this.label1000.Name = "label1000";
             this.label1000.Size = new System.Drawing.Size(99, 16);
             this.label1000.TabIndex = 2;
@@ -637,17 +640,19 @@
             // 
             // Travel
             // 
+            this.Travel.Controls.Add(this.TravelGrid);
+            this.Travel.Controls.Add(this.Mabda);
             this.Travel.Controls.Add(this.SearchTravel);
             this.Travel.Controls.Add(this.SubmitTravel);
-            this.Travel.Controls.Add(this.dateTimePicker1);
+            this.Travel.Controls.Add(this.traveldate);
             this.Travel.Controls.Add(this.label21);
             this.Travel.Controls.Add(this.label19);
             this.Travel.Controls.Add(this.label18);
             this.Travel.Controls.Add(this.label17);
             this.Travel.Controls.Add(this.label16);
-            this.Travel.Controls.Add(this.textBox6);
-            this.Travel.Controls.Add(this.textBox5);
-            this.Travel.Controls.Add(this.textBox4);
+            this.Travel.Controls.Add(this.Dest);
+            this.Travel.Controls.Add(this.price);
+            this.Travel.Controls.Add(this.traveltime);
             this.Travel.Location = new System.Drawing.Point(4, 25);
             this.Travel.Margin = new System.Windows.Forms.Padding(4);
             this.Travel.Name = "Travel";
@@ -658,7 +663,7 @@
             // 
             // SearchTravel
             // 
-            this.SearchTravel.Location = new System.Drawing.Point(563, 156);
+            this.SearchTravel.Location = new System.Drawing.Point(806, 161);
             this.SearchTravel.Name = "SearchTravel";
             this.SearchTravel.Size = new System.Drawing.Size(84, 23);
             this.SearchTravel.TabIndex = 14;
@@ -667,24 +672,25 @@
             // 
             // SubmitTravel
             // 
-            this.SubmitTravel.Location = new System.Drawing.Point(666, 156);
+            this.SubmitTravel.Location = new System.Drawing.Point(909, 161);
             this.SubmitTravel.Name = "SubmitTravel";
             this.SubmitTravel.Size = new System.Drawing.Size(81, 23);
             this.SubmitTravel.TabIndex = 13;
             this.SubmitTravel.Text = "ثبت";
             this.SubmitTravel.UseVisualStyleBackColor = true;
+            this.SubmitTravel.Click += new System.EventHandler(this.SubmitTravel_Click);
             // 
-            // dateTimePicker1
+            // traveldate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(547, 123);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 12;
+            this.traveldate.Location = new System.Drawing.Point(790, 128);
+            this.traveldate.Name = "traveldate";
+            this.traveldate.Size = new System.Drawing.Size(200, 22);
+            this.traveldate.TabIndex = 12;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(783, 123);
+            this.label21.Location = new System.Drawing.Point(1026, 128);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(35, 16);
             this.label21.TabIndex = 11;
@@ -693,7 +699,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(787, 97);
+            this.label19.Location = new System.Drawing.Point(1030, 102);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(31, 16);
             this.label19.TabIndex = 9;
@@ -702,7 +708,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(764, 71);
+            this.label18.Location = new System.Drawing.Point(1007, 76);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(53, 16);
             this.label18.TabIndex = 8;
@@ -711,7 +717,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(784, 45);
+            this.label17.Location = new System.Drawing.Point(1027, 50);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(33, 16);
             this.label17.TabIndex = 7;
@@ -720,32 +726,32 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(791, 19);
+            this.label16.Location = new System.Drawing.Point(1034, 24);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(25, 16);
             this.label16.TabIndex = 6;
             this.label16.Text = "مبدا";
             // 
-            // textBox6
+            // Dest
             // 
-            this.textBox6.Location = new System.Drawing.Point(682, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(65, 22);
-            this.textBox6.TabIndex = 5;
+            this.Dest.Location = new System.Drawing.Point(925, 47);
+            this.Dest.Name = "Dest";
+            this.Dest.Size = new System.Drawing.Size(65, 22);
+            this.Dest.TabIndex = 5;
             // 
-            // textBox5
+            // price
             // 
-            this.textBox5.Location = new System.Drawing.Point(682, 68);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(65, 22);
-            this.textBox5.TabIndex = 4;
+            this.price.Location = new System.Drawing.Point(925, 73);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(65, 22);
+            this.price.TabIndex = 4;
             // 
-            // textBox4
+            // traveltime
             // 
-            this.textBox4.Location = new System.Drawing.Point(682, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(65, 22);
-            this.textBox4.TabIndex = 3;
+            this.traveltime.Location = new System.Drawing.Point(925, 99);
+            this.traveltime.Name = "traveltime";
+            this.traveltime.Size = new System.Drawing.Size(65, 22);
+            this.traveltime.TabIndex = 3;
             // 
             // Drivers
             // 
@@ -1049,6 +1055,23 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // Mabda
+            // 
+            this.Mabda.Location = new System.Drawing.Point(925, 19);
+            this.Mabda.Name = "Mabda";
+            this.Mabda.Size = new System.Drawing.Size(65, 22);
+            this.Mabda.TabIndex = 15;
+            // 
+            // TravelGrid
+            // 
+            this.TravelGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TravelGrid.Location = new System.Drawing.Point(43, 280);
+            this.TravelGrid.Name = "TravelGrid";
+            this.TravelGrid.RowHeadersWidth = 51;
+            this.TravelGrid.RowTemplate.Height = 24;
+            this.TravelGrid.Size = new System.Drawing.Size(1030, 209);
+            this.TravelGrid.TabIndex = 16;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1071,6 +1094,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Bus.ResumeLayout(false);
             this.Bus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TravelGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1130,11 +1154,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Dest;
+        private System.Windows.Forms.TextBox price;
+        private System.Windows.Forms.TextBox traveltime;
        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker traveldate;
         private System.Windows.Forms.Button SearchTravel;
         private System.Windows.Forms.Button SubmitTravel;
         private System.Windows.Forms.Label label24;
@@ -1171,6 +1195,8 @@
         private System.Windows.Forms.ColumnHeader UphoneNumberheader;
         private System.Windows.Forms.ColumnHeader BrithdateHeader;
         private System.Windows.Forms.ColumnHeader UgenederHeadaer;
+        private System.Windows.Forms.TextBox Mabda;
+        private System.Windows.Forms.DataGridView TravelGrid;
     }
 }
 

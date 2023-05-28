@@ -21,7 +21,7 @@ namespace Travel_Agancy
             RefreshCoGrid();
 
 
-
+            RefreshTrvaelGrid();
 
         }
 
@@ -308,6 +308,30 @@ namespace Travel_Agancy
                 list = list.Where(x => x.phone.StartsWith(Co_phone));
 
             CompanyGridView.DataSource = list.ToList();
+        }
+
+        private void RefreshTrvaelGrid()
+        {
+
+            travelAgencyEntities db = new travelAgencyEntities();
+            TravelGrid.DataSource = (from Co in db.travels
+                                     select Co).ToList();
+        }
+        private void SubmitTravel_Click(object sender, EventArgs e)
+        {
+            travel travel = new travel()
+            {
+                destination = Dest.Text,
+                beginning = Mabda.Text.Trim(),
+                time = TimeSpan.Parse(traveltime.Text),
+                date = traveldate.Value.Date,
+                ticket_cost = Decimal.Parse(price.Text.Trim())
+            };
+
+            travelAgencyEntities db = new travelAgencyEntities();
+            db.travels.Add(travel);
+            db.SaveChanges();
+            RefreshTrvaelGrid();
         }
     }
 }
